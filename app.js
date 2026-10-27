@@ -75,7 +75,7 @@
   };
 
   // --- Configuration ---
-  const WHATSAPP_NUMBER = '256700000000'; // Lovett official WhatsApp number
+  const WHATSAPP_NUMBER = '2567615506828'; // Lovett official WhatsApp number (07615506828)
   const FREE_SHIPPING_THRESHOLD = 35000;  // UGX
 
   // --- State ---
