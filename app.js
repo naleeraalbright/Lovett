@@ -14,6 +14,7 @@
       price: 5000,
       weight: '100g',
       thumbClass: 'thumb-aloe',
+      image: 'images/aloe-vera-soap.jpg',
       tagline: 'Hydrating & Soothing Daily Bath Bar',
       badge: 'Daily Essential',
       badgeType: 'badge-green',
@@ -30,6 +31,7 @@
       price: 7000,
       weight: '100g',
       thumbClass: 'thumb-turmeric',
+      image: 'images/turmeric-soap.jpg',
       tagline: 'Brightening & Skin Toning Herbal Bar',
       badge: 'Radiance & Tone',
       badgeType: 'badge-yellow',
@@ -46,6 +48,7 @@
       price: 10000,
       weight: '100g',
       thumbClass: 'thumb-black',
+      image: 'images/african-black-soap.jpg',
       tagline: 'Traditional Deep Cleansing & Clarifying Bar',
       badge: 'Deep Purifier',
       badgeType: 'badge-dark',
@@ -62,6 +65,7 @@
       price: 20000,
       weight: '300g (3 x 100g)',
       thumbClass: 'thumb-aloe',
+      image: 'images/lovett-trio-soaps.jpg',
       tagline: 'Aloe Vera + Turmeric + African Black Soap',
       badge: 'Bundle Special',
       badgeType: 'badge-yellow',
@@ -75,7 +79,7 @@
   };
 
   // --- Configuration ---
-  const WHATSAPP_NUMBER = '2567615506828'; // Lovett official WhatsApp number (07615506828)
+  const WHATSAPP_NUMBER = '256761506828'; // Lovett official WhatsApp number (0761506828)
   const FREE_SHIPPING_THRESHOLD = 35000;  // UGX
 
   // --- State ---
@@ -252,7 +256,7 @@
         return `
           <div class="cart-item" data-id="${item.id}">
             <div class="cart-item-thumb ${item.thumbClass || 'thumb-aloe'}">
-              <span>${item.icon || '🧼'}</span>
+              ${item.image ? `<img src="${item.image}" alt="${item.name}" class="cart-item-img">` : `<span>${item.icon || '🧼'}</span>`}
             </div>
             <div class="cart-item-details">
               <h4>${item.name}</h4>
@@ -315,6 +319,7 @@
         price: product.price,
         weight: product.weight,
         icon: product.icon,
+        image: product.image,
         thumbClass: product.thumbClass,
         quantity: quantity
       });
@@ -500,13 +505,14 @@
 
     quickViewBody.innerHTML = `
       <div class="quick-view-visual-wrap">
+        ${product.image ? `<img src="${product.image}" alt="${product.name}" class="quick-view-real-img">` : `
         <div class="soap-visual ${product.thumbClass === 'thumb-aloe' ? 'soap-visual-aloe' : product.thumbClass === 'thumb-turmeric' ? 'soap-visual-turmeric' : 'soap-visual-black'}">
           <div class="soap-emboss">
             <span class="emboss-brand">LOVE IT</span>
             <span class="emboss-type">${product.name.replace('Love it ', '').toUpperCase()}</span>
             <span class="emboss-leaf">${product.icon}</span>
           </div>
-        </div>
+        </div>`}
       </div>
       <div class="quick-view-info">
         <span class="product-badge ${product.badgeType}">${product.badge}</span>

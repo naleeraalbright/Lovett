@@ -24,7 +24,7 @@ A modern, responsive e-commerce sales website for **Lovett**, handcrafted in Uga
 
 - **Cart & Order System:** Slide-out drawer with quantity controls, subtotal, and promo code support (`LOVETT10` for 10% off).
 - **Ugandan Delivery Calculation:** Destination selector covering Kampala Central, Greater Kampala/Wakiso, Entebbe, and Upcountry parcels, with free Kampala delivery unlocked at 35,000 UGX.
-- **WhatsApp Direct Checkout & Consultation:** Instant ordering and 1-on-1 skincare consultations via WhatsApp (+256 761 550 6828 / 07615506828).
+- **WhatsApp Direct Checkout & Consultation:** Instant ordering and 1-on-1 skincare consultations via WhatsApp (+256 761 506 828 / 0761506828).
 - **MTN MoMo Merchant Payments:** Integrated payment support using MTN MoMo Merchant Code **41977046** (Dial `*165*3#`).
 - **Native Checkout Dialog:** Support for MTN Mobile Money, Airtel Money, and Cash on Delivery.
 - **Skin Routine Matcher Quiz:** Interactive tool to guide shoppers to the ideal soap based on skin type and skincare goals.
