@@ -892,21 +892,6 @@
       });
     }
 
-    // Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
-    const contactFeedback = document.getElementById('contactFeedback');
-    if (contactForm && contactFeedback) {
-      contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('contactName').value;
-        const soap = document.getElementById('contactSoapChoice').value;
-        contactFeedback.hidden = false;
-        contactFeedback.className = 'form-feedback success';
-        contactFeedback.textContent = `Thank you, ${name}! Your inquiry regarding ${soap} has been received. Our team will contact you shortly.`;
-        contactForm.reset();
-      });
-    }
-
     // Newsletter Form
     const newsletterForm = document.getElementById('newsletterForm');
     const newsletterSuccess = document.getElementById('newsletterSuccess');
