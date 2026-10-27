@@ -2557,6 +2557,241 @@ a {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* --- Skincare Consultation (WhatsApp Only) Section --- */
+.consultation-section {
+  padding: 5rem 0;
+  background: linear-gradient(180deg, var(--cream-bg) 0%, #FFFFFF 100%);
+}
+
+.consultation-card {
+  background: linear-gradient(135deg, #1A3628 0%, #2D5A43 100%);
+  border-radius: var(--radius-lg);
+  padding: 3.5rem 3rem;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.consultation-glow {
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(37, 211, 102, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.consultation-tag {
+  background-color: rgba(37, 211, 102, 0.2);
+  color: #72F3A2;
+  border-color: rgba(37, 211, 102, 0.4);
+}
+
+.consultation-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #FFFFFF;
+  margin-bottom: 0.85rem;
+}
+
+.consultation-desc {
+  font-size: 1.0625rem;
+  opacity: 0.92;
+  line-height: 1.65;
+  max-width: 680px;
+  margin-bottom: 2.25rem;
+}
+
+.consultation-perks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+  margin-bottom: 2.5rem;
+}
+
+.consultation-perk {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.perk-bullet {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.consultation-perk strong {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--yellow-bright);
+  margin-bottom: 0.25rem;
+}
+
+.consultation-perk p {
+  font-size: 0.8125rem;
+  opacity: 0.85;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.consultation-action-area {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.btn-consultation {
+  padding: 1rem 2rem;
+  font-size: 1.0625rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+}
+
+.consultation-note {
+  font-size: 0.8125rem;
+  opacity: 0.75;
+}
+
+/* --- MTN MoMo Merchant Payment Component Styles --- */
+.cart-momo-notice {
+  background-color: var(--yellow-soft);
+  border: 1px solid var(--yellow-tint);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.momo-notice-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.momo-pill {
+  background-color: var(--yellow-primary);
+  color: #1A281F;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.momo-code-label {
+  font-size: 0.8125rem;
+  color: #6C4200;
+}
+
+.cart-momo-notice small {
+  font-size: 0.75rem;
+  color: #7A5310;
+}
+
+/* Checkout Dialog MoMo Card */
+.momo-payment-card {
+  background: linear-gradient(135deg, #FFFDF8, var(--yellow-soft));
+  border: 2px solid var(--yellow-primary);
+  border-radius: var(--radius-md);
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.momo-card-badge {
+  font-size: 0.8125rem;
+  font-weight: 800;
+  color: #7A4B00;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+
+.momo-card-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FFFFFF;
+  padding: 0.65rem 0.95rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--yellow-tint);
+  margin-bottom: 0.75rem;
+}
+
+.momo-code-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.momo-code-title {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.momo-code-digits {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #B36800;
+  letter-spacing: 0.08em;
+}
+
+.btn-copy-momo {
+  background-color: var(--yellow-primary);
+  color: #1A281F;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.45rem 0.85rem;
+  border-radius: var(--radius-full);
+  transition: background-color var(--trans-fast);
+}
+
+.btn-copy-momo:hover {
+  background-color: var(--yellow-hover);
+  color: #FFFFFF;
+}
+
+.momo-ussd-instructions {
+  font-size: 0.8125rem;
+  color: #553A0B;
+}
+
+.momo-ussd-instructions p {
+  margin-bottom: 0.3rem;
+}
+
+.momo-ussd-instructions ol {
+  padding-left: 1.25rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.momo-ussd-instructions code {
+  background-color: rgba(229, 154, 24, 0.2);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.momo-highlight {
+  background-color: var(--yellow-primary) !important;
+  color: #1A281F !important;
+  font-weight: 800 !important;
+}
+
 /* --- Responsive Breakpoints --- */
 @media (max-width: 1024px) {
   .hero-grid {
@@ -2582,6 +2817,10 @@ a {
   }
 
   .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consultation-perks {
     grid-template-columns: 1fr;
   }
 

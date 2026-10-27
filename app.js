@@ -425,6 +425,7 @@
       }
       lines.push(`• Delivery: ${formatUGX(delivery)} (${selectedZoneText})`);
       lines.push(`• *Total Payable: ${formatUGX(grandTotal)}*`);
+      lines.push(`• *MTN MoMo Merchant Code:* 41977046 (Dial *165*3#)`);
     }
 
     if (customerDetails) {
@@ -433,7 +434,10 @@
       lines.push(`• Name: ${customerDetails.name}`);
       lines.push(`• Phone: ${customerDetails.phone}`);
       lines.push(`• Delivery Address: ${customerDetails.address}`);
-      lines.push(`• Preferred Payment: ${customerDetails.payment}`);
+      lines.push(`• Payment Method: ${customerDetails.payment}`);
+      if (customerDetails.payment && customerDetails.payment.includes('MTN')) {
+        lines.push(`• MTN Merchant Code: *41977046*`);
+      }
       if (customerDetails.notes) {
         lines.push(`• Notes: ${customerDetails.notes}`);
       }
@@ -798,6 +802,40 @@
     if (openCheckoutModalBtn) {
       openCheckoutModalBtn.addEventListener('click', () => {
         openCheckout();
+      });
+    }
+
+    // Copy MTN MoMo Merchant Code
+    const copyMomoBtn = document.getElementById('copyMomoBtn');
+    if (copyMomoBtn) {
+      copyMomoBtn.addEventListener('click', () => {
+        const code = '41977046';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(() => {
+            showToast('MTN MoMo Merchant Code 41977046 copied!', '📋');
+            copyMomoBtn.innerHTML = '<span>✓ Copied!</span>';
+            setTimeout(() => {
+              copyMomoBtn.innerHTML = '<span>📋 Copy Code</span>';
+            }, 2500);
+          }).catch(() => {
+            showToast(`Merchant Code: ${code}`, '💛');
+          });
+        } else {
+          showToast(`Merchant Code: ${code}`, '💛');
+        }
+      });
+    }
+
+    // Toggle MTN MoMo payment instructions box
+    const checkoutPayment = document.getElementById('checkoutPayment');
+    const momoPaymentInfo = document.getElementById('momoPaymentInfo');
+    if (checkoutPayment && momoPaymentInfo) {
+      checkoutPayment.addEventListener('change', () => {
+        if (checkoutPayment.value.includes('MTN')) {
+          momoPaymentInfo.style.display = 'block';
+        } else {
+          momoPaymentInfo.style.display = 'none';
+        }
       });
     }
 
